@@ -50,22 +50,19 @@ a {
 }
 
 .contacts {
+  display: flex;
+  flex-direction: column;
   max-width: 240px;
   justify-self: end;
-  text-align: start;
+  gap: 4px;
+  font-size: 18px;  
 }
 
 .contacts__item {
-  display: flex;
-  flex-direction: column;
-  min-height: 24px;  
-  font-size: 18px;
   letter-spacing: -0.8%;   
 }
 
 .contacts__item-address {
-  display: flex; 
-  font-size: 18px;
   line-height: 24px;   
 }
 
@@ -84,27 +81,26 @@ a {
   background-image: url(../images/cover.jpg);
   background-position: center; 
   background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -2; 
+  background-size: cover; 
 }
 
 .overlay {
   display: flex;
   position: absolute;
   background: rgba(0, 0, 0, 0.6);
-  z-index: -1;
+  z-index: 1;
   inset: 0;
 }
 
 .cover__title {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   text-transform: uppercase;
   font-size: 100px;
   letter-spacing: calc(100px * 0.3); 
   color: white;
-  height: 385px;  
+  row-gap: 18px;
+  z-index: 1;  
 }
 
 .cover__title_alignedtext_left {
@@ -131,6 +127,7 @@ a {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 22px;
+  z-index: 1;
 }
 
 .cover__description_text {
@@ -145,21 +142,20 @@ a {
   text-transform: uppercase;
   color: white;
   width: 256px;
-  height: 51px;
+  min-height: 51px;
+  cursor: pointer;
 }
 
 .lots {
   display: flex;
   flex-direction: column;
-  margin: 180px 24px 119px;
+  margin: 180px 24px 120px;
 }
 
 .lots__heading {
   font-family: 'Raleway', sans-serif;
   font-size: 40px;
   text-transform: uppercase;
-  width: 121px;
-  height: 47px;
   margin-left: 40px;
   margin-bottom: 27px;
 }
@@ -168,11 +164,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-  min-height: 596px;
-  width: 100%;
   list-style: none;           
-  padding-left: 0;
-  margin: 0; 
 }
 
 .lots__card-list-item {
@@ -207,17 +199,14 @@ a {
 
 .lots__card_type-film {
   background-image: url(../images/card-lot-01.jpg);
-  z-index: -2;
 }
 
 .lots__card_type-book {
   background-image: url(../images/card-lot-02.jpg);
-  z-index: -2;  
 }
 
 .lots__card_type-pic {
   background-image: url(../images/card-lot-03.jpg);
-  z-index: -2;  
 }
 
 .lots__see-more {
@@ -226,21 +215,22 @@ a {
   text-decoration-thickness: 1px;  
   font-weight: 400;
   font-size: 20px;
-  margin: 30px 820px 2px 40px;
+  margin: 30px 820px 0px 40px;
 }
 
 .about {
-  padding-left: 24px;
+  padding-top: 35px;
+  /*padding-left: 24px;*/
   padding-right: 24px;
-  height: 775px;  
+  padding-bottom: 180px;
+    
 }
 
 .about__column {
   display: grid;
-  grid-template-columns: 334px 1fr;
-  grid-template-rows: 23px 267px 1fr;
+  grid-template-columns: 380px 1fr;
+  grid-template-rows: min-content;
   grid-template-areas: 
-  ".  ."
   "about__logo  about__title"
   ".  about__text";
 }
@@ -255,9 +245,7 @@ a {
   width: 240px;
   height: 240px;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  top: -4px;   
+  justify-content: center; 
 }
 
 .about__logo-image {
@@ -270,46 +258,40 @@ a {
   grid-area: about__title;  
   text-transform: uppercase;
   font-size: 40px;
-  align-self: center;
-  padding-left: 25px;  
+  align-self: center; 
+  padding-left: 3px;
+  position: relative;
+  top: 3px;  
 }
 
 .about__text {
   grid-area: about__text;
   display: flex;
   flex-direction: column-reverse;
-  position: relative;
-  top: -9.2px;
+  /*position: relative;
+  top: -9.2px;*/
   font-size: 20px;
   gap: 24px;
-  padding-left: 25px;
+  padding: 7px 0px 0px 4px;
   text-align: left;
-}
-
-.about__text-p1 {
-  max-width: 688px;
-  letter-spacing: -0.1px;  
-}
-
-.about__text-p2 {
-  max-width: 690px;  
 }
 
 .footer {
   display: grid;
   grid-template-columns: 265px 1fr 240px;
-  padding: 0 50px;
-  height: 180px;   
+  padding: 0 50px 240px;  
 }
 
 .contacts__footer {
   max-width: 265px;
+  padding-top: 3px;
 }
 
 .footer__menu-list {
   text-align: center;
   font-size: 18px;
   margin-right: 23px;
+  padding-top: 1px;  
 }
 
 .footer__menu-list-item {
