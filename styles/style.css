@@ -54,8 +54,9 @@ a {
   flex-direction: column;
   max-width: 240px;
   justify-self: end;
-  gap: 4px;
-  font-size: 18px;  
+  gap: 3px;
+  font-size: 18px;
+  font-style: normal;    
 }
 
 .contacts__item {
@@ -174,11 +175,9 @@ a {
   position: relative;  
   background-position: center;      
   background-size: cover;        
-  background-repeat: no-repeat;
-  width: 334px;
   min-height: 596px;
   padding: 48px 40px;
-  color: white;
+  color: white;   
 }
 
 .lots__card-title {
@@ -189,12 +188,14 @@ a {
   line-height: 120%; 
   text-transform: uppercase;
   text-decoration: underline;
+  z-index: 2;  
 }
 
 .lots__card-text {
   font-size: 20px;
   font-weight: 400;
   line-height: 120%;
+  z-index: 2;  
 }
 
 .lots__card_type-film {
@@ -220,10 +221,8 @@ a {
 
 .about {
   padding-top: 35px;
-  /*padding-left: 24px;*/
   padding-right: 24px;
-  padding-bottom: 180px;
-    
+  padding-bottom: 180px;   
 }
 
 .about__column {
@@ -268,8 +267,6 @@ a {
   grid-area: about__text;
   display: flex;
   flex-direction: column-reverse;
-  /*position: relative;
-  top: -9.2px;*/
   font-size: 20px;
   gap: 24px;
   padding: 7px 0px 0px 4px;
@@ -279,12 +276,13 @@ a {
 .footer {
   display: grid;
   grid-template-columns: 265px 1fr 240px;
-  padding: 0 50px 240px;  
+  height: 180px;
+  padding: 0 50px;  
 }
 
 .contacts__footer {
   max-width: 265px;
-  padding-top: 3px;
+  padding-top: 2px;
 }
 
 .footer__menu-list {
