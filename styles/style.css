@@ -276,8 +276,7 @@ a {
 .footer {
   display: grid;
   grid-template-columns: 265px 1fr 240px;
-  height: 180px;
-  padding: 0 50px;  
+  padding: 0 50px 82px;  
 }
 
 .contacts__footer {
